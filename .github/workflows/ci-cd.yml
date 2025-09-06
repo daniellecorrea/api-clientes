@@ -24,8 +24,9 @@ jobs:
           java-version: "17"
           distribution: "temurin"
 
-      - name: Compilar o projeto com o Maven
+      - name: Compilar projeto
         run: mvn clean package -DskipTests
+        working-directory: api-clientes
 
       - name: Pegar os arquivos da pasta target
         run: ls -la target
